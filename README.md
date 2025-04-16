@@ -2,17 +2,21 @@
 
 ![Clarity Banner](clarity_logo.png)
 
-A powerful AI assistant platform for therapists. Enhance your clinical work with data-driven insights, practice sessions, and advanced patient analysis.
+A powerful AI assistant platform designed for mental health professionals. Clarity helps therapists enhance their clinical work with data-driven insights, practice sessions, and advanced patient analysis.
+
+## Dashboard Overview
 
 ![Clarity Dashboard](clarity-dashboard.jpg)
 
+The Clarity dashboard provides a comprehensive view of your patient roster with AI-generated risk assessments, upcoming sessions, and treatment progress indicators. Therapists can quickly identify patients needing attention and access their complete history with a single click.
+
 ## Features
 
-- **Patient History Timeline** - Track progress and spot patterns
-- **Therapeutic Rehearsal** - Practice with simulated patient responses
-- **Topic Detection** - Identify key themes using ML
-- **Treatment Planning** - Create evidence-based plans 
-- **Condition Screening** - Get probability-based screening results
+- **Patient History Timeline** - Track therapy progress and identify patterns over time
+- **Therapeutic Rehearsal** - Practice different approaches with AI-simulated patient responses
+- **Topic Detection** - Use machine learning to identify key therapeutic themes in session notes
+- **Treatment Planning** - Create evidence-based plans with AI assistance
+- **Condition Screening** - Get probability-based screening results for common conditions
 
 ### See Clarity in action!
 
