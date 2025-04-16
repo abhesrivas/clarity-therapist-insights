@@ -4,7 +4,7 @@
 
 A powerful AI assistant platform for therapists. Enhance your clinical work with data-driven insights, practice sessions, and advanced patient analysis.
 
-![Clarity Dashboard](docs/images/clarity-dashboard.jpg)
+![Clarity Dashboard](clarity-dashboard.jpg)
 
 ## Features
 
@@ -13,6 +13,8 @@ A powerful AI assistant platform for therapists. Enhance your clinical work with
 - **Topic Detection** - Identify key themes using ML
 - **Treatment Planning** - Create evidence-based plans 
 - **Condition Screening** - Get probability-based screening results
+
+### See Clarity in action!
 
 <p align="center">
   <img src="clarity.gif" alt="Clarity Demo" width="600px">
