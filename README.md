@@ -49,4 +49,4 @@ bun run dev
 
 This is a demonstration application. Do not use with real patient data.
 
-[View Demo](https://your-demo-url.com)
+[View Demo](https://pt8xs8-5173.csb.app/)
