@@ -1,0 +1,44 @@
+Validation accuracy: 0.3642
+Classification Report:
+                          precision    recall  f1-score   support
+
+               addiction       0.00      0.00      0.00         1
+        anger-management       0.38      0.50      0.43         6
+                 anxiety       0.44      0.54      0.48        13
+       behavioral-change       0.12      0.12      0.12         8
+    children-adolescents       0.00      0.00      0.00         0
+ counseling-fundamentals       0.50      0.50      0.50         2
+              depression       0.62      0.52      0.57        29
+               diagnosis       0.00      0.00      0.00         0
+       domestic-violence       0.12      0.33      0.18         3
+        eating-disorders       0.00      0.00      0.00         2
+         family-conflict       0.36      0.33      0.35        12
+          grief-and-loss       0.00      0.00      0.00         1
+         human-sexuality       0.00      0.00      0.00         0
+                intimacy       0.39      0.35      0.37        20
+        legal-regulatory       0.33      0.33      0.33         3
+                   lgbtq       0.67      0.67      0.67         3
+                marriage       0.00      0.00      0.00         3
+         military-issues       0.00      0.00      0.00         0
+               parenting       0.64      1.00      0.78         9
+     professional-ethics       0.00      0.00      0.00         2
+relationship-dissolution       0.30      0.30      0.30        10
+           relationships       0.36      0.33      0.35        24
+             self-esteem       0.14      0.09      0.11        11
+       sleep-improvement       0.00      0.00      0.00         1
+    social-relationships       0.00      0.00      0.00         3
+            spirituality       0.00      0.00      0.00         3
+                  stress       0.00      0.00      0.00         0
+         substance-abuse       0.00      0.00      0.00         1
+                  trauma       0.00      0.00      0.00         1
+ workplace-relationships       0.00      0.00      0.00         2
+
+                accuracy                           0.36       173
+               macro avg       0.18      0.20      0.18       173
+            weighted avg       0.36      0.36      0.36       173
+
+Model and label encoder saved to 'weights/' directory
+
+Sample Text: My partner lives in Canada while I live in the US. We visit each other, but we go months in between ...
+Predicted Topic: intimacy
+Actual Topic: anxiety

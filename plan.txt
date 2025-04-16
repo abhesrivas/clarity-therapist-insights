@@ -1,0 +1,95 @@
+Assignment
+----------
+Task: Create a website that mental health counselors can use when they need some guidance on how to best help a patient
+
+Idea: Clarity, designed for counselors to better understand their patients
+
+Simulation:
+    (Could do this with Python classes)
+    - Let's create N personas for patients
+    - Let's create K personas for professionals
+
+Datasets:
+    - Amod/mental_health_counseling_conversations
+        - This can help with:
+             (1) Creating personas (we can group and create patients out of that dataset)
+             (2) Rehearsal too – Challenge would be to group them meaningfully to create consistent personas out (but let's worry about this later!)
+
+    - Need another dataset to train an ML prediction model to show on the dashboard or perhaps utilize as input to the LLM
+        - How about we also utilize off-the-shelf emotion models?
+        - We could train a depression prediction model here
+
+How does Clarity help professionals?
+- Understand and identify underlying mental conditions their patients might be dealing with (depression, etc)
+    – Req: ML model
+– Support for organically eliciting mental health questionnaire answers during a call
+    – Imagine getting answers to a questionnaire but organically during a conversation without making it explicit to the patient
+    – Req: LLM that prompts in the right places if professional has decided on a certain test
+- Deep Dive mode – we link relevant studies and papers that could be related to a condition a patient has
+    – Retrieval (RAG) to bring relevant studies about the current patient (query = patient data, docs = literature database)
+– How similar is the patient to other patients the person is looking at?
+    Could there be similarities? What about historical cases under the doctor? This could be helpful in linking and identifying conditions
+    – Retrieval to bring patients similar to the current patient (query = current patient data, docs = other patients)
+– Tailor offline messages for the patient in the style of the professional
+    – Use LLM again conditioned on personas
+– Screen live conversation for certain keywords ("suicide") – featurize words being used and perhaps even run online models to prompt the professional about possible conditions the patient might have
+    – Live LLM tracking, transcription with whisper required
+- Refer to expert – Allow a professional to refer a patient to someone else who might be better suited
+    – We can utilize therapist profiles and predict based on patient history + their content who would be the best suited as per experience
+    – Take as input – Generated topic scores
+– Let therapists ask questions about the patient to the LLM (LLM replies with evidence)
+
+Rehearsal Mode (Preventive Care) --> Get an LLM to behave like the patient to better prepare the counselor
+
+-------------
+Requirements:
+-------------
+- #1 – P0 – ML model to predict topics given a conversation [DONE]
+– #2 – P0 – Ask Clarity Feature [In Progress]
+            LLM to take as input: (1) Therapist Query, (2) Patient Persona and (3) Patient History + Content and output answer
+            Return answer with grounded evidence
+
+– P0 – Customize patient schema – Let therapists customize patient schemas (JSON based) with the conversations of the patient (they select patient, change attributes and click on populate – our prompt updates the fields)
+- P0 – Literature review for finding info on patient conditions (need to pair this with possible condition prediction first – some model would be required here)
+
+– P1 – "Refer to an expert therapist" feature – Create 5 therapist personas
+- P2 – Off-the-shelf ML models to predict depression, etc
+
+
+Requirements sent to Chariot AI:
+These are the functionalities I am trying out to build out –
+
+Landing page should be to choose which Therapist you are (to simulate a log in page) – Just show 3 therapists in cards for now – add random images to each
+
+Once I click on one of those – we should enter the dashboard and it show say Hello X (this page should be customizable for them – do this by changing the colors for each therapist)
+
+Now inside the page – I want recent patients just like you have but for each patient card – add these buttons – (1) view history, (2) Chat about patient, (3) Rehearse (this is a feature I will talk about in just a second), (4) Plan your next call (again we will discuss what to do here), (5) Screen for conditions (we will discuss), (6) Refer to Expert
+
+For (6) Refer to expert, once I click on them, open a page where we will run an ML model to determine which Therapist out of N therapists is the best suited so the page should display all N in sorted order with text from an LLM on which one of them would be the best suited for this patient. Simulate all of this but give me space in the code to add those functionalities.
+
+For (5) – we will again go to a new page and run a few models in the background and basically output which of those conditions is the most likely to have.
+
+For (4) – we will let the therapist choose from three options on a new page (as cards) – (a) link literature studies (this would call an ML model to retrieve top-K studies and we would display those links there) , (b) find similar patients historically (we would display all the past patients who were similar to this one), (c) create custom plan – this is where therapist would work with the LLM to create a text plan
+
+For (3) – we would let therapist chat with an LLM that would act like the patient. There should be a field on top of the box that lets the therapist add a prompt to steer the dialogue in that direction.
+
+For (2) – chat with LLM with the patient history in context
+
+For (1) – Display history of the patient with ML model stats on a dashboard – display some plots like where does this patient lie compared to other patients on a few parameters
+
+Can you build this out?
+
+On the rehearse page – add a prompt space to talk about any specific points the therapist wanted to touch – also on that page add a "Clarity Nudges" button at the top that if switched on adds realtime nudge feature with an LLM based on the ongoing conversation and suggestions on how to nudge it in a certain direction.
+
+Can you add a readme on TODO on how to integrate each of the features in the backend? I want to use OpenAI keys to do all my LLM work here. For patient history, let's store all of those in a folder for now, for literature review – I want to utilize an ML model to find similarity against research papers again stored in a folder, create boilerplate files for all of these features (ml scoring file that returns a certain output (you don't need to fill it) and then a detailed readme for me to know what input and output those files require AND how I can integrate those in and test it. I can do the ML work myself.
+
+Actually, create ALL those files for N patients and N therapists and for now just add simulated replies in all of those files (for openai ones – you can add a flag on the top of the first page if I want simulated for testing or actually use OpenAI (triggering that should change everything in the background from simulated to actual) 
+
+I want all those js files created in server, actual patient and therapis data (create random ones) in the directory
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Features to add to the app:
+- 1 ML model integration – Add a session note and the trend changes
+– Use LLM to act like the patient (use session notes, map it to a personality, with nudges + focus points ––> nudge in that direction while the chat is going on, add info about the approach, display nudges on a screen on the right)
+

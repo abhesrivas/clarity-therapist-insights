@@ -1,0 +1,8 @@
+$ vite --port "3000" --host
+
+  VITE v6.2.0  ready in 182 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.0.35:3000/
+  ➜  Network: http://10.5.0.2:3000/
+  ➜  press h + enter to show help

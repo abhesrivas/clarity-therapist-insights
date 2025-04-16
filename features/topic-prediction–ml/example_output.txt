@@ -1,0 +1,12 @@
+Text: I don't like myself...
+Top Prediction: self-esteem (Confidence: 0.4974)
+
+All Topic Predictions:
+----------------------------------------
+Topic                     | Confidence
+----------------------------------------
+self-esteem               | 0.4974
+depression                | 0.4094
+lgbtq                     | 0.0429
+anxiety                   | 0.0243
+marriage                  | 0.0059
