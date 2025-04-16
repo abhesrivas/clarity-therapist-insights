@@ -1,6 +1,6 @@
 # Clarity: AI-Powered Therapy Assistant
 
-![Clarity Banner](https://via.placeholder.com/800x200/3b82f6/FFFFFF?text=Clarity+Therapy+Platform)
+![Clarity Banner](clarity_logo.png)
 
 Clarity helps therapists leverage AI to provide better patient care through data-driven insights, simulated rehearsals, and personalized treatment planning.
 
@@ -50,14 +50,14 @@ git clone https://github.com/your-username/clarity.git
 cd clarity
 
 # Install dependencies
-npm install
+bun install
 
 # Add your OpenAI API key
 # Create a .env.local file with:
 VITE_OPENAI_API_KEY=your_key_here
 
 # Start development server
-npm run dev
+bun run dev
 
 # Visit http://localhost:3000 in your browser
 ```
@@ -73,7 +73,7 @@ Clarity includes a custom-trained ML model for topic prediction and condition sc
 
 ## 📋 Requirements
 
-- Node.js 16+
+- Bun runtime
 - OpenAI API key (GPT-4 recommended for best results)
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - Internet connection for API calls
