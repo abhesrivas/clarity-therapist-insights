@@ -49,4 +49,4 @@ bun run dev
 
 This is a demonstration application. Do not use with real patient data.
 
-[View Demo](https://your-demo-url.com) | [Documentation](docs/README.md)
+[View Demo](https://your-demo-url.com)
