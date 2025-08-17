@@ -2,7 +2,9 @@
 
 ![Clarity Banner](clarity_logo.png)
 
-A powerful AI assistant platform designed for mental health professionals. Clarity helps therapists enhance their clinical work with data-driven insights, practice sessions, and advanced patient analysis.
+An AI assistant platform designed for mental health professionals. Clarity helps therapists enhance their clinical work with data-driven insights, practice sessions, and advanced patient analysis.
+
+**Note:** This is only an PoC with code that needs to be cleaned up and organized.
 
 ## Dashboard Overview
 
